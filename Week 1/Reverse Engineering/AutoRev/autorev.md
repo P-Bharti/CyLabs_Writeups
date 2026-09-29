@@ -12,7 +12,7 @@ nc mysterious-sea.picoctf.net 64831 | tee data.txt
 
 If you want to do it properly however, you must make a pwn _script_
 
-You can connect to nc after importing * from pwn (via remote()), and recive (io.recvline()/.recvuntil(b"string")) and send (io.sendline(b"string")) lines from there. For some reason for me, it kept showing EOF even though it should hae worked theoretically T_T oh well.
+You can connect to nc after importing * from pwn (via remote()), and recive (io.recvline()/.recvuntil(b"string")) and send (io.sendline(b"string")) lines from there. For some reason for me, it kept showing EOF even though it should have worked theoretically T_T oh well.
 
 ## Solution
 Fastest fingers first
