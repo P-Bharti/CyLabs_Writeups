@@ -3,31 +3,23 @@
 <br></br>
 
 ## Approach
-Just like RED, faced with only an image as a file the first thing that pops to mind is **exiftool** 
+copy pasting text can get you to see the text under the black bar, but the flag isnt there, so examine metadata using `exiftool` and see that the Author label was in base64
 
 ```
-exiftool ukn_reality.jpg
+exiftool confidential.pdf
 ```
-
-In all the information that come out, we find an unusual listing:
-
-```
-Attribution URL                 : cGljb0NURntNRTc0RDQ3QV9ISUREM05fYjMyMDQwYjh9Cg==
-```
-
-This was the flag ecoded in base64! (very recognisable due to its signature "=" padding)
 
 ## Solution
 Either decode the base64 string with dcode, cyberchef or via terminal:
 ```
-echo "cGljb0NURntNRTc0RDQ3QV9ISUREM05fYjMyMDQwYjh9Cg==" | base64 -d
+echo "YWNhZGVteXtwdXp6bDNkX20zdGFkYXRhX2YwdW5kIV85ZDNjYzY2OX0=" | base64 -d
 ```
 
 ## Flag
-picoCTF{ME74D47A_HIDD3N_b32040b8}
+academy{puzzl3d_m3tadata_f0und!_9d3cc669}
 
 ## Takeaway
-exiftool images like its a habit
+base64 larp
 
 
 
